@@ -1,0 +1,19 @@
+#path for restaurants:
+/restaurants.html
+    #headers for path:
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode=block
+
+#path for index
+/index.html
+    #headers for path:
+    X-Frame-Options: DENY
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode=block
+
+#path for tourism
+/tourism.html
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode=block
+    X-Frame-Options: DENY
+
