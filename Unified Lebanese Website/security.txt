@@ -22,4 +22,10 @@ for XSS.
 After _headers:
 
 Testing brute forcefully after configuring a _header option:
+Website is secure against most attacks, no need to fear about anything
+for there isn't much data to leak and talk about, I want people to
+view this webpage and interact, I dont care if it got leaked
+the only thing I care about is people cross site Scripting rerouting 
+users to another webpage.
+
     

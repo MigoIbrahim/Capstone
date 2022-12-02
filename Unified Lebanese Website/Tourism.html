@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!--Head-->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
   <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Tangerine">
 </head>
 <body>
+  <!-- Start of HTML and NavBar-->
   <div class="container">
     <div class="row">
       <div class="menu-btn">
@@ -32,6 +34,7 @@
 
  
   <script>
+    //Start of Script and card layouts 
     document.querySelector(".menu-btn").addEventListener("click", abc);
 function abc() {
   document.querySelector(".main-menu").classList.toggle("show");
@@ -72,10 +75,11 @@ function abc() {
     });
     function myFunction() {
     }
-  
+  //End of script 
   </script>
+  
   <style>
-    
+    /*Start of CSS and navbar*/
     * {
       padding: 0;
       margin: 0;
@@ -135,7 +139,7 @@ function abc() {
       text-align: center;
       line-height: 1.6;
     }
-    
+    /*All size matters, allocate reasonbale size for all screens*/
     @media screen and (max-width: 268px) {
       .main-menu {
         position: absolute;
@@ -170,6 +174,7 @@ function abc() {
         font-size: 2rem;
       }
     }
+    /*Make everything pretty by adding fonts*/
     @font-face {
     font-family: 'Source Sans Pro';
     font-style: normal;
@@ -213,7 +218,7 @@ function abc() {
     text-rendering: optimizeLegibility;
   }
  
-  
+  /*Add Cards and their specialties*/
   div.cards {
     margin: 50px auto;
     max-width: 1060px;
@@ -355,9 +360,9 @@ function abc() {
     
   }
  
-
+  /*End of CSS*/
   </style>
-  
+  <!--Cards-->
   
   <div class="cards">
     <div class="card">
@@ -371,7 +376,7 @@ function abc() {
           <a href="https://goo.gl/maps/feVdfPa5RGkyQkyn7"target="_blank">Anjar</a>
           
         </h2>
-      <small>NB: If you are going to Anjar also consider going to Baalbek.</small>
+      <small>NB: If you are going to Anjar also consider going to <a href="https://goo.gl/maps/4EobUP5eoFAT4Gru5">Baalbek.</a></small>
       </div>  
     </div>
     
@@ -384,7 +389,7 @@ function abc() {
           
           <a href="https://goo.gl/maps/4EobUP5eoFAT4Gru5"target="_blank">Baalbek</a>
           </h2>
-          <small> Extra things to do in Baalbek: <a href="https://goo.gl/maps/WJYxUuZ1TvgptTbF8"target="_blank">Ksara</a> 	&#11049; <a href="https://www.tripadvisor.com/Restaurant_Review-g295421-d12029253-Reviews-Lakkis_Farm_Restaurant-Baalbeck_Bekaa_Governorate.html">	Sfiha</a></small>
+          <small> Extra things to do in Baalbek: <a href="https://goo.gl/maps/WJYxUuZ1TvgptTbF8"target="_blank">Ksara Winery</a> 	&#11049; <a href="https://www.tripadvisor.com/Restaurant_Review-g295421-d12029253-Reviews-Lakkis_Farm_Restaurant-Baalbeck_Bekaa_Governorate.html"> Eat Sfiha</a></small>
         
        
       </div>
@@ -402,8 +407,9 @@ function abc() {
         <h2>
           
            <a href="https://goo.gl/maps/ocUSzd1TdEXu3ibT8"target="_blank">Beit Eddine</a>
-          <small>Also go to: <a href="https://goo.gl/maps/nCbCgh2M9NcVe4Q87">Deir El Qamar</a></small>
           </h2>
+          <small>Also go to: <a href="https://goo.gl/maps/nCbCgh2M9NcVe4Q87">Deir El Qamar</a></small>
+          
       </div>
       
     </div>
@@ -415,9 +421,10 @@ function abc() {
         <h2>
           
           <a href="https://goo.gl/maps/ETQPyLyeVtkofguG7"target="_blank">Byblos</a>
-          <small><a href="https://www.the961.com/12-things-to-do-in-the-historical-city-of-jbeil/">Extra things to do in Jbeil </a></small>
           
         </h2>
+        <small>Extra things to do in: <a href="https://www.the961.com/12-things-to-do-in-the-historical-city-of-jbeil/"> Jbeil</a></small>
+          
       </div>
     </div>
 
@@ -434,9 +441,9 @@ function abc() {
           
           
         </h2>
-        <small>This picture was extracted from <a href="https://www.nationalgeographic.com/travel/article/qadisha-valley-mountain-hermit-dario-escobar"target="_blank">National Geographic</a></small>
+        <small>This picture was extracted from: <a href="https://www.nationalgeographic.com/travel/article/qadisha-valley-mountain-hermit-dario-escobar"target="_blank">National Geographic</a></small>
         
-      <small><br>NB: Also consider going to <a href ="https://goo.gl/maps/TAP9s9C6guwoUTBZ8">Ceders Mountain</a></small>
+      <small><br>Also consider going to: <a href ="https://goo.gl/maps/TAP9s9C6guwoUTBZ8">Ceders Mountain</a></small>
       </div>
       
     </div>
@@ -454,7 +461,7 @@ function abc() {
           
           <a href="https://goo.gl/maps/NkdvCouFXvoDz1xr7"target="_blank">Tyre </a>
           </h2>
-          <small>Image from britannica <a href="https://www.britannica.com/place/Tyre"target="_blank">Link</a></small>
+          <small>Image from britannica: <a href="https://www.britannica.com/place/Tyre"target="_blank">Link</a></small>
           <br>
           <small> More to see in Tyre: <a href="https://lebanonexplorer.com/15-best-things-to-do-in-tyre-lebanon/"target="_blank">Link</a> </small> 
         
@@ -469,5 +476,7 @@ function abc() {
     </div>
   
   </div>
+  <!-- End of Card Layout-->
 </body>
 </html>
+<!--End of HTML page-->

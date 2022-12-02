@@ -9,6 +9,8 @@
     
 </head>
 <body>
+  <!--Start of HTML-->
+  <!--Nav-bar-->
     <div class="container">
         <div class="row">
           <div class="menu-btn">
@@ -30,10 +32,13 @@
       </div>
     
     <script>
+      //Start of JavaScript code
+      //JavaScript for Nav Bar
         document.querySelector(".menu-btn").addEventListener("click", abc);
     function abc() {
       document.querySelector(".main-menu").classList.toggle("show");
     }
+    //Indexifying the Cards and how do they move
         $(document).ready(function () {
           var zindex = 10;
         
@@ -70,18 +75,17 @@
         });
         function myFunction() {
         }
-      
+      //End of Javascript code
       </script>
     <style>
-         
+         /*Start of CSS code*/
+       
     * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
       }
-      body {
-        font-family: sans-serif;
-      }
+    
       
       ul {
         list-style: none;
@@ -117,222 +121,224 @@
       color: #4f585e;
       font-family: 'Source Sans Pro', sans-serif;
       text-rendering: optimizeLegibility;
+      margin: 50px 0;
+      color: var(--black);
+      font: 1rem/1.3 sans-serif;
+     
     }
 
 
         
-        /* RESET RULES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-:root {
-    --black: #3a3a3a;
-    --white: #fff;
-    --green: #49b293;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  ol {
-    list-style: none;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-    font-family: 'Montserrat', sans-serif,'Cursive';
-  }
-  
-  body {
-    margin: 50px 0;
-    color: var(--black);
-    font: 1rem/1.3 sans-serif;
-  }
-  
-  .author-archive {
-    padding: 1.5rem;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-family: 'Montserrat', sans-serif,'Cursive';
-  }
-  
-  h1 a {
-    transition: all 0.1s;
-    font-family: 'Montserrat', sans-serif,'Cursive';
-  }
-  
-  h1 a:hover {
-    background: var(--green);
-    color: var(--white);
-  }
-  
-  input[type="radio"] {
-    position: absolute;
-    left: -9999px;
-  }
-  
-  
-  /* FILTERS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .filters {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .filters * {
-    display: inline-block;
-  }
-  
-  .filters label {
-    padding: 0.5rem 1rem;
-    margin-bottom: 0.25rem;
-    border-radius: 2rem;
-    min-width: 50px;
-    line-height: normal;
-    cursor: pointer;
-    transition: all 0.1s;
-  }
-  
-  .filters label:hover {
-    background: var(--green);
-    color: var(--white);
-  }
-  
-  
-  /* FILTERED ELEMENTS (POSTS)
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .posts {
-    display: grid;
-    grid-gap: 1.5rem;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  
-  .posts .post {
-    background: #fafafa;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  .posts .post-title {
-    font-size: 1.3rem;
-  }
-  
-  .posts .post-title:hover {
-    text-decoration: underline;
-  }
-  
-  .posts figcaption {
-    padding: 1rem;
-  }
-  
-  .posts .post-categories {
-    margin-bottom: 0.75rem;
-    font-size: 0.75rem;
-  }
-  
-  .posts .post-categories * {
-    display: inline-block;
-  }
-  
-  .posts .post-categories li {
-    margin-bottom: 0.2rem;
-  }
-  
-  .posts .post-categories a {
-    padding: 0.2rem 0.5rem;
-    border-radius: 1rem;
-    border: 1px solid;
-    line-height: normal;
-    transition: all 0.1s;
-  }
-  
-  .posts .post-categories a:hover {
-    background: var(--green);
-    color: var(--white);
-  }
-  
-  
-  /* FILTERING RULES
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  [value="All"]:checked ~ .filters [for="All"],
-  [value="Lebanese"]:checked ~ .filters [for="Lebanese"],
-  [value="French"]:checked ~ .filters [for="French"],
-  [value="Italian"]:checked ~ .filters [for="Italian"],
-  [value="Japanese"]:checked ~ .filters [for="Japanese"],
-  [value="Indian"]:checked ~ .filters [for="Indian"],
-  [value="Others"]:checked ~ .filters [for="Others"] {
-    background: var(--green);
-    color: var(--white);
-  }
-  
-  [value="All"]:checked ~ .posts [data-category] {
-    display: block;
-  }
-  
-  [value="Lebanese"]:checked ~ .posts .post:not([data-category~="Lebanese"]),
-  [value="French"]:checked ~ .posts .post:not([data-category~="French"]),
-  [value="Italian"]:checked ~ .posts .post:not([data-category~="Italian"]),
-  [value="Japanese"]:checked ~ .posts .post:not([data-category~="Japanese"]),
-  [value="Indian"]:checked ~ .posts .post:not([data-category~="Indian"]),
-  [value="Others"]:checked ~ .posts .post:not([data-category~="Others"]) {
-    display: none;
-  }
-  
-  
-  /* FOOTER
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  footer {
-    font-size: 1rem;
-    padding: 0 1.5rem;
-    text-align: right;
-  }
-  
-  footer span {
-    color: #e31b23;
-  }
-  
-  
-  /* MQ
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  @media screen and (max-width: 1500px) {
-    .posts {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  @media screen and (max-width: 1100px) {
-    .posts {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media screen and (max-width: 650px) {
-    html {
-      font-size: 14px;
-    }
-  
-    .posts {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
+    /* RESET RULES and start with the code for filtering results
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    :root {
+        --black: #3a3a3a;
+        --white: #fff;
+        --green: #49b293;
+      }
+      
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      
+      ol {
+        list-style: none;
+      }
+      
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-family: 'Montserrat', sans-serif,'Cursive';
+      }
+      
+     
+      
+      .author-archive {
+        padding: 1.5rem;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-family: 'Montserrat', sans-serif,'Cursive';
+      }
+      
+      h1 a {
+        transition: all 0.1s;
+        font-family: 'Montserrat', sans-serif,'Cursive';
+      }
+      
+      h1 a:hover {
+        background: var(--green);
+        color: var(--white);
+      }
+      
+      input[type="radio"] {
+        position: absolute;
+        left: -9999px;
+      }
+      
+      
+      /* FILTERS
+      –––––––––––––––––––––––––––––––––––––––––––––––––– */
+      .filters {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      
+      .filters * {
+        display: inline-block;
+      }
+      
+      .filters label {
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.25rem;
+        border-radius: 2rem;
+        min-width: 50px;
+        line-height: normal;
+        cursor: pointer;
+        transition: all 0.1s;
+      }
+      
+      .filters label:hover {
+        background: var(--green);
+        color: var(--white);
+      }
+      
+      
+      /* FILTERED ELEMENTS (POSTS)
+      –––––––––––––––––––––––––––––––––––––––––––––––––– */
+      .posts {
+        display: grid;
+        grid-gap: 1.5rem;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      
+      .posts .post {
+        background: #fafafa;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      
+      .posts .post-title {
+        font-size: 1.3rem;
+      }
+      
+      .posts .post-title:hover {
+        text-decoration: underline;
+      }
+      
+      .posts figcaption {
+        padding: 1rem;
+      }
+      
+      .posts .post-categories {
+        margin-bottom: 0.75rem;
+        font-size: 0.75rem;
+      }
+      
+      .posts .post-categories * {
+        display: inline-block;
+      }
+      
+      .posts .post-categories li {
+        margin-bottom: 0.2rem;
+      }
+      
+      .posts .post-categories a {
+        padding: 0.2rem 0.5rem;
+        border-radius: 1rem;
+        border: 1px solid;
+        line-height: normal;
+        transition: all 0.1s;
+      }
+      
+      .posts .post-categories a:hover {
+        background: var(--green);
+        color: var(--white);
+      }
+      
+      
+      /* FILTERING RULES
+      –––––––––––––––––––––––––––––––––––––––––––––––––– */
+      [value="All"]:checked ~ .filters [for="All"],
+      [value="Lebanese"]:checked ~ .filters [for="Lebanese"],
+      [value="French"]:checked ~ .filters [for="French"],
+      [value="Italian"]:checked ~ .filters [for="Italian"],
+      [value="Japanese"]:checked ~ .filters [for="Japanese"],
+      [value="Indian"]:checked ~ .filters [for="Indian"],
+      [value="Others"]:checked ~ .filters [for="Others"] {
+        background: var(--green);
+        color: var(--white);
+      }
+      
+      [value="All"]:checked ~ .posts [data-category] {
+        display: block;
+      }
+      
+      [value="Lebanese"]:checked ~ .posts .post:not([data-category~="Lebanese"]),
+      [value="French"]:checked ~ .posts .post:not([data-category~="French"]),
+      [value="Italian"]:checked ~ .posts .post:not([data-category~="Italian"]),
+      [value="Japanese"]:checked ~ .posts .post:not([data-category~="Japanese"]),
+      [value="Indian"]:checked ~ .posts .post:not([data-category~="Indian"]),
+      [value="Others"]:checked ~ .posts .post:not([data-category~="Others"]) {
+        display: none;
+      }
+      
+      
+      /* FOOTER
+      –––––––––––––––––––––––––––––––––––––––––––––––––– */
+      footer {
+        font-size: 1rem;
+        padding: 0 1.5rem;
+        text-align: right;
+      }
+      
+      footer span {
+        color: #e31b23;
+      }
+      
+      
+      /* MQ
+      –––––––––––––––––––––––––––––––––––––––––––––––––– */
+      @media screen and (max-width: 1500px) {
+        .posts {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media screen and (max-width: 1100px) {
+        .posts {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+      @media screen and (max-width: 650px) {
+        html {
+          font-size: 14px;
+        }
+      
+        .posts {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
   /*Images have to be 1032 x 924 size!! */
+  /*End of CSS code*/
     </style>
     <section class="author-archive">
+      <!-- HTML -->
         <div class="container">
-        
+        <!--Defining set elements-->
           <input type="radio" id="All" name="categories" value="All" checked>
           <input type="radio" id="Lebanese" name="categories" value="Lebanese">
           <input type="radio" id="French" name="categories" value="French">
@@ -340,7 +346,7 @@
           <input type="radio" id="Japanese" name="categories" value="Japanese">
           <input type="radio" id="Indian" name="categories" value="Indian">
           <input type="radio" id="Others" name="categories" value="Others">
-      
+      <!-- Enabling filtering and how to define them and display them-->
           <ol class="filters">
             <li>
               <label for="All">All</label>
@@ -364,7 +370,7 @@
               <label for="Others">Others</label>
             </li>
           </ol>
-      
+      <!-- DIV CARDS!!-->
           <ol class="posts">
             <li class="post" data-category="Indian">
               <article>
@@ -383,6 +389,7 @@
                     <h2 class="post-title">Al Hindi
                       </a>
                     </h2>
+                    
                   </figcaption>
                 </figure>
               </article>
@@ -588,6 +595,7 @@
           </ol>
         </div>
         <script>
+          //Star rating---------------> Future plan
           const { MongoClient, ServerApiVersion } = require('mongodb');
           const uri = "mongodb+srv://miguelibrahim:<password>@cluster0.aixnkqa.mongodb.net/?retryWrites=true&w=majority";
           const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
@@ -596,8 +604,11 @@
             // perform actions on the collection object
             console.log("connection sucessful")
             client.close();
+            //I might not add it due to security concerns, concerning the server side.
           });</script>
+          
       </section>
       
 </body>
 </html>
+<!--END OF PAGE AND HTML-->
